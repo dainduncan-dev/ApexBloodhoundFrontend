@@ -1,0 +1,148 @@
+@import "./variables.scss";
+@import "./mixins.scss";
+
+.navbar {
+  height: 80px;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(107, 107, 107, 1) 100%
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+
+  .navbar-logo {
+    img {
+      width: 275px;
+    }
+  }
+
+  .nav-menu {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    gap: 20px;
+    list-style: none;
+    text-align: center;
+    width: 70vw;
+    justify-content: end;
+    margin-right: 2rem;
+
+    .nav-links {
+      color: #fff;
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+
+      &:hover {
+        background-color: $charcoal;
+        border-radius: 4px;
+        transition: all 0.2s ease-in-out;
+      }
+    }
+
+    .menu-icon {
+      display: none;
+      visibility: hidden;
+    }
+
+  }
+
+  .auth-link-wrapper {
+    display: flex;
+    height: 100%;
+    align-items: center;
+
+    .auth-link-logout{
+      color: white;
+      padding: 10px;
+      background-color: $warning;
+      border-radius: 3px;
+      border: none;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    .auth-link {
+      margin-right: 18px;
+      a {
+        text-decoration: none;
+      }
+
+      .login {
+        color: white;
+        padding: 10px;
+        background-color: green;
+        border-radius: 3px;
+      }
+
+      .register {
+        color: white;
+        padding: 10px;
+        background-color: orange;
+        border-radius: 3px;
+      }
+    }
+  }
+}
+
+@include respond(tablet) {
+  .navbar {
+    position: relative;
+
+    .navbar-logo {
+      display: none;
+    }
+
+    .nav-menu {
+      display: flex;
+      flex-direction: column;
+      width: 80%;
+      height: 100vh;
+      position: absolute;
+      top: 80px;
+      left: -100%;
+      opacity: 1;
+      transition: all 0.5s ease;
+    }
+
+    .nav-menu.active {
+      background: $charcoal;
+      left: 0;
+      opacity: 1;
+      transition: all 0.5s ease;
+      display: flex;
+      justify-content: space-evenly;
+      z-index: 1;
+    
+
+    .nav-links {
+      text-align: center;
+      padding: 2rem;
+      width: 100%;
+      display: table;
+
+      &:hover {
+        background-color: #ff0000;
+        border-radius: 5px;
+      }
+    }}
+
+    .menu-icon {
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      transform: translate(-100%, 60%);
+      font-size: 1.8rem;
+      cursor: pointer;
+    }
+
+    .fa-times {
+      color: #fff;
+      font-size: 2rem;
+    }
+  }
+}

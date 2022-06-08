@@ -1,0 +1,81 @@
+@import './mixins.scss';
+
+.homepage-container {
+  display: flex;
+  flex-direction: column;
+  height: calc(87vh );
+  text-align: center;
+  background-color: $charcoal;
+
+  .homepage-heading {
+    color: white;
+    text-shadow: 0px 0px 8px black;
+  }
+
+  .card-wrapper {
+    display: flex;
+    justify-content: space-evenly;
+    height: 100%;
+    align-items: center;
+
+    @include respond(tablet) {
+      flex-direction: column;
+      width: 100%;
+    }
+
+    @include respond(mobile) {
+      flex-direction: column;
+      width: 100%;
+    }
+
+    .card-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #9a0b15;
+      border-radius: 5px;
+
+      .homepage-card {
+        padding: 250px 200px;
+        text-decoration: none;
+        color: black;
+        font-size: 1.5em;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        border-radius: 15px;
+
+        a {
+          margin-top: 10px;
+        }
+        
+        @include respond(tablet) {
+
+          padding: 10px;
+          width: 250px;
+          height: 210px;
+          
+        }
+        @include respond(mobile) {
+          padding: 10px;
+          width: 130px;
+          height: 160px;
+          
+        }
+
+
+        .icon {
+          margin-bottom: 10px;
+        }
+
+        &:hover {
+            box-shadow: 0px 0px 15px black;
+            color: white;
+            text-shadow: 0px 0px 5px black;
+            
+        }
+      }
+    }
+  }
+}

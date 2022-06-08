@@ -1,0 +1,43 @@
+@import "./mixins.scss";
+@import "./variables.scss";
+
+.register-form-wrapper {
+  display: flex;
+  background-color: $charcoal;
+  width: 100vw;
+  height: 80vh;
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: center;
+
+  @include respond(tablet) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 84vh;
+  }
+
+  form {
+    width: 33vw;
+    
+    .title {
+      font-size: 2em;
+    }
+
+    .input-label {
+      font-size: 1.2em;
+    }
+
+    @include input-element();
+    .base-input {
+      color: white;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      text-shadow: 0px 0px 5px black;
+    }
+    @include respond(tablet) {
+      width: 60vw;
+    }
+  }
+}

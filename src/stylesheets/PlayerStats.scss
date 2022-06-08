@@ -1,0 +1,147 @@
+@import "./mixins.scss";
+@import "./variables.scss";
+
+.player-stats-form-wrapper {
+  display: flex;
+  background-color: $charcoal;
+  width: 100vw;
+  height: 87vh;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: center;
+
+  @include respond(mobile) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 84vh;
+  }
+
+  form {
+    width: 33%;
+
+    .input-label {
+      font-size: 2em;
+    }
+
+    .login-label {
+      font-size: 1.2em;
+    }
+
+    @include input-element();
+    .base-input {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+    }
+
+    @include respond(mobile) {
+      width: 90vw;
+    }
+  }
+}
+
+.player-stats-wrapper {
+  display: flex;
+  background-color: $charcoal;
+  width: 100vw;
+  text-align: center;
+  justify-content: space-evenly;
+  align-items: space-between;
+  
+
+  .active-legend-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    .left-column {
+      .active-legend-image {
+        img {
+          width: 40vw;
+
+          @include respond(mobile) {
+            width: 60vw;
+          }
+        }
+      }
+    }
+
+    .right-column {
+      text-shadow: 0px 0px 5px red;
+      font-size: 3em;
+      font-weight: bold;
+      padding: 20px;
+
+      div {
+        padding: 10px;
+      }
+
+      @include respond(mobile) {
+        font-size: 1.75em;
+      }
+    }
+
+    @include respond(mobile) {
+      flex-direction: column;
+    }
+    
+  }
+}
+
+.overall-stats-wrapper {
+  display: flex;
+  height: 30vh;
+  width: 100vw;
+  background-color: $charcoal;
+  color: red;
+  justify-content: space-evenly;
+  flex-direction: row;
+  font-size: 2em;
+
+  
+
+  .overall-stats {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+
+    .overall-kills {
+      text-shadow: 0px 0px 8px black;
+      height: 60px;
+    }
+    
+    @include respond(mobile) {
+      flex-direction: column;
+      
+    }
+  }
+
+  .rank-wrapper {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    height: 100%;
+    text-shadow: 0px 0px 8px black;
+    .rank-label {
+      margin-right: 50px;
+        margin-bottom: 10px;
+
+    }
+
+    .rank-metadata {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      .rank-text {
+        margin-bottom: 50px;
+      }
+    }
+    
+  }
+
+  
+}
