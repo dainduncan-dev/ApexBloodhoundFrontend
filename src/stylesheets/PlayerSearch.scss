@@ -3,7 +3,7 @@
 .player-search-form-wrapper {
   display: flex;
   width: 100vw;
-  height: 60vh;
+  height: 87vh;
   align-items: center;
   justify-content: space-evenly;
   text-align: center;
@@ -14,16 +14,12 @@
     justify-content: center;
     height: 84vh;
   }
-  
+
   form {
     width: 33vw;
-    
-    .title {
-      font-size: 2em;
-    }
 
     .input-label {
-      font-size: 1.2em;
+      font-size: 2em;
     }
 
     @include input-element();
