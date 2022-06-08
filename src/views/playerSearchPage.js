@@ -65,7 +65,7 @@ export default class PlayerSearch extends React.Component {
             placeholder="Player Name"
             value={this.state.query}
           />
-          <button onClick={this.handleSubmit} className="btn">
+          <button type="submit" className="btn">
             Search
           </button>
         </form>
