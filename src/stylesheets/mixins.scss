@@ -26,10 +26,6 @@
     background-color: $warning;
     color: white;
 
-    &:active, &:focus {
-        outline: none;
-    }
-
     &:hover {
         background-color: white;
         color: red;
